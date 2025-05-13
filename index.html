@@ -9,13 +9,25 @@
 </head>
 <body>
   <div id="aiva-app">
-    <div class="floating-icon" id="aiva-icon"></div>
+    <!-- Floating icon -->
+    <div class="floating-icon" id="aiva-icon" title="Hey Lovely, I'm listening..."></div>
+
+    <!-- Chat UI -->
     <div class="chat-box" id="chat-box">
-      <div id="messages"></div>
-      <input type="text" id="user-input" placeholder="Say something..." autocomplete="off" />
-      <button id="send-btn">Send</button>
+      <div id="messages" class="messages"></div>
+      <div class="input-area">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Say something..."
+          autocomplete="off"
+        />
+        <button id="send-btn">Send</button>
+      </div>
     </div>
   </div>
+
+  <!-- Script for logic -->
   <script src="script.js"></script>
 </body>
-    </html>
+</html>
