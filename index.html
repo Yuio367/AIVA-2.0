@@ -2,29 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIVA | The AI that knows you</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AIVA Launch</title>
+  <script>
+    // Simulated step tracking — later replace with real progress flags
+    let setupStep = localStorage.getItem("aivaStep") || "0";
+
+    switch(setupStep) {
+      case "0":
+        window.location.href = "opening-animation.html";
+        break;
+      case "1":
+        window.location.href = "terms-and-conditions.html";
+        break;
+      case "2":
+        window.location.href = "language-setup.html";
+        break;
+      case "3":
+        window.location.href = "train-name.html";
+        break;
+      case "4":
+        window.location.href = "voice-password.html";
+        break;
+      case "5":
+        window.location.href = "permissions.html";
+        break;
+      case "6":
+        window.location.href = "main-chat.html";
+        break;
+      default:
+        window.location.href = "main-chat.html";
+    }
+  </script>
 </head>
 <body>
-  <!-- Opening Animation -->
-  <div id="opening-screen" class="screen active">
-    <img src="https://i.ibb.co/WvZBrsKv/file-00000000efa8622fad909be549c68621.png" alt="AIVA Logo" class="logo-animation" />
-    <h1 class="tagline">The AI that knows you</h1>
-  </div>
-
-  <!-- Terms and Conditions Screen -->
-  <div id="terms-screen" class="screen hidden">
-    <h2>Welcome to AIVA</h2>
-    <p>By accepting the terms and conditions you agree with our policies.</p>
-    <p><a href="#" id="view-terms">View Terms and Conditions</a></p>
-    <div class="btn-group">
-      <button id="accept-btn">Accept</button>
-      <button id="decline-btn">Decline</button>
-    </div>
-  </div>
-
-  <!-- Link to JS -->
-  <script src="script.js"></script>
 </body>
 </html>
