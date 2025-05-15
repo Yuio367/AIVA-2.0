@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.aiva-ui {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#floating-icon {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-image: url('aiva-logo.png'); /* Replace with your uploaded logo */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 15px white;
+  animation: glow 2s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px white; }
+  50% { box-shadow: 0 0 20px white; }
+  100% { box-shadow: 0 0 5px white; }
+}
+
+#chat-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+#chat-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 10px black;
+}
+
+#messages {
+  min-height: 300px;
+}
+
+#input-section {
+  display: flex;
+  margin-top: 10px;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+}
+
+#send-btn {
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  }
